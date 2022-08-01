@@ -1,0 +1,4 @@
+asyncpg==0.25.0
+disnake==2.5.1
+psutil==5.9.0
+requests==2.27.1

@@ -8,7 +8,7 @@ class manager(commands.Cog):
     def __init__(self,client):
         self.client = client
         self.status.start()
-    test_guilds = [798352530564055050, 810552816527081472, 894073671172382753]
+    test_guilds = []
     
     @commands.slash_command(guild_ids = test_guilds, description="")
     @commands.default_member_permissions(administrator=True)
@@ -27,15 +27,15 @@ class manager(commands.Cog):
     """
         await inter.response.defer()
         if bot == 'Ark Guardian':
-            member = inter.guild.get_member(977371773425295430)
-            if str(inter.author.id) != '839281450671013898' or str(inter.author.id) != '600905112038408193':
+            member = inter.guild.get_member(bot_id)
+            if str(inter.author.id) != 'your_user_id' or str(inter.author.id) != 'your_user_id':
                 if str(member.status) == 'offline':
                     embed = disnake.Embed(title=f'**__Restarting {bot}__**', description = f'```Please Allow For Up To Five (5) Seconds For {bot} To Be Up And Running.```', color=color)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                     embed.set_thumbnail(url=client.user.display_avatar.url)
                     await inter.send(embed=embed)
-                    os.chdir("/root/Bots/Ark Guardian Dev/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 bot.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 else:
                     embed = disnake.Embed(title=f'**__Restart Error__**', description = f'```{inter.author.name}, {bot} Is Online And Does Not Need To Be Restarted.```', color=color1)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
@@ -47,35 +47,35 @@ class manager(commands.Cog):
                 embed.set_thumbnail(url=client.user.display_avatar.url)
                 await inter.send(embed=embed)
         elif bot == 'Ark Pop':
-            member = inter.guild.get_member(887837554374758420)
-            if str(inter.author.id) != '839281450671013898' or str(inter.author.id) != '600905112038408193':
+            member = inter.guild.get_member(bot_id)
+            if str(inter.author.id) != 'your_user_id' or str(inter.author.id) != 'your_user_id':
                 if str(member.status) == 'offline':
                     embed = disnake.Embed(title=f'**__Restarting {bot}__**', description = f'```Please Allow For Up To Five (5) Seconds For {bot} To Be Up And Running.```', color=color)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                     embed.set_thumbnail(url=client.user.display_avatar.url)
                     await inter.send(embed=embed)
-                    os.chdir("/root/Bots/Ark Pop/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 ark.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 else:
                     embed = disnake.Embed(title=f'**__Restart Error__**', description = f'```{inter.author.name}, {bot} Is Online And Does Not Need To Be Restarted.```', color=color1)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                     embed.set_thumbnail(url=client.user.display_avatar.url)
-                    await inter.send(embed=embed)
+                    await inter.send(embed=embed) 
             else:
                 embed = disnake.Embed(title=f'**__Restart Error__**', description = f'```{inter.author.name}, You Are Not Authorized To Restart {bot}.```', color=color1)
                 embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                 embed.set_thumbnail(url=client.user.display_avatar.url)
                 await inter.send(embed=embed)
         elif bot == 'Bic Development':
-            member = inter.guild.get_member(852947904577798206)
-            if str(inter.author.id) != '839281450671013898' or str(inter.author.id) != '600905112038408193':
+            member = inter.guild.get_member(bot_id)
+            if str(inter.author.id) != 'your_user_id' or str(inter.author.id) != 'your_user_id':
                 if str(member.status) == 'offline':
                     embed = disnake.Embed(title=f'**__Restarting {bot}__**', description = f'```Please Allow For Up To Five (5) Seconds For {bot} To Be Up And Running.```', color=color)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                     embed.set_thumbnail(url=client.user.display_avatar.url)
                     await inter.send(embed=embed)
-                    os.chdir("/root/Bots/Bic/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 bic.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 else:
                     embed = disnake.Embed(title=f'**__Restart Error__**', description = f'```{inter.author.name}, {bot} Is Online And Does Not Need To Be Restarted.```', color=color1)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
@@ -87,15 +87,15 @@ class manager(commands.Cog):
                 embed.set_thumbnail(url=client.user.display_avatar.url)
                 await inter.send(embed=embed)
         elif bot == 'BMS Manager':
-            member = inter.guild.get_member(942536076210339841)
-            if str(inter.author.id) != '839281450671013898' or str(inter.author.id) != '600905112038408193' or str(inter.author.id) != '791737494696755240' or str(inter.author.id) != '580825951001247744':
+            member = inter.guild.get_member(bot_id)
+            if str(inter.author.id) != 'your_user_id' or str(inter.author.id) != 'your_user_id':
                 if str(member.status) == 'offline':
                     embed = disnake.Embed(title=f'**__Restarting {bot}__**', description = f'```Please Allow For Up To Five (5) Seconds For {bot} To Be Up And Running.```', color=color)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                     embed.set_thumbnail(url=client.user.display_avatar.url)
                     await inter.send(embed=embed)
-                    os.chdir("/root/Bots/BMS Bot/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 ark.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 else:
                     embed = disnake.Embed(title=f'**__Restart Error__**', description = f'```{inter.author.name}, {bot} Is Online And Does Not Need To Be Restarted.```', color=color1)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
@@ -107,15 +107,15 @@ class manager(commands.Cog):
                 embed.set_thumbnail(url=client.user.display_avatar.url)
                 await inter.send(embed=embed)
         elif bot == 'Guardian':
-            member = inter.guild.get_member(892487976540590090)
-            if str(inter.author.id) != '839281450671013898' or str(inter.author.id) != '600905112038408193':
+            member = inter.guild.get_member(bot_id)
+            if str(inter.author.id) != 'your_user_id' or str(inter.author.id) != 'your_user_id':
                 if str(member.status) == 'offline':
                     embed = disnake.Embed(title=f'**__Restarting {bot}__**', description = f'```Please Allow For Up To Five (5) Seconds For {bot} To Be Up And Running.```', color=color)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                     embed.set_thumbnail(url=client.user.display_avatar.url)
                     await inter.send(embed=embed)
-                    os.chdir("/root/Bots/Guardian/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 bot.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 else:
                     embed = disnake.Embed(title=f'**__Restart Error__**', description = f'```{inter.author.name}, {bot} Is Online And Does Not Need To Be Restarted.```', color=color1)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
@@ -127,15 +127,15 @@ class manager(commands.Cog):
                 embed.set_thumbnail(url=client.user.display_avatar.url)
                 await inter.send(embed=embed)
         elif bot == 'Tickets':
-            member = inter.guild.get_member(845389276937191495)
-            if str(inter.author.id) != '839281450671013898' or str(inter.author.id) != '600905112038408193':
+            member = inter.guild.get_member(bot_id)
+            if str(inter.author.id) != 'your_user_id' or str(inter.author.id) != 'your_user_id':
                 if str(member.status) == 'offline':
                     embed = disnake.Embed(title=f'**__Restarting {bot}__**', description = f'```Please Allow For Up To Five (5) Seconds For {bot} To Be Up And Running.```', color=color)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                     embed.set_thumbnail(url=client.user.display_avatar.url)
                     await inter.send(embed=embed)
-                    os.chdir("/root/Bots/Tickets/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 bot.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 else:
                     embed = disnake.Embed(title=f'**__Restart Error__**', description = f'```{inter.author.name}, {bot} Is Online And Does Not Need To Be Restarted.```', color=color1)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
@@ -147,15 +147,15 @@ class manager(commands.Cog):
                 embed.set_thumbnail(url=client.user.display_avatar.url)
                 await inter.send(embed=embed)
         elif bot == 'Dupe Protection':
-            member = inter.guild.get_member(977358161210130524)
-            if str(inter.author.id) != '839281450671013898' or str(inter.author.id) != '600905112038408193':
+            member = inter.guild.get_member(bot_id)
+            if str(inter.author.id) != 'your_user_id' or str(inter.author.id) != 'your_user_id':
                 if str(member.status) == 'offline':
                     embed = disnake.Embed(title=f'**__Restarting {bot}__**', description = f'```Please Allow For Up To Five (5) Seconds For {bot} To Be Up And Running.```', color=color)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
                     embed.set_thumbnail(url=client.user.display_avatar.url)
                     await inter.send(embed=embed)
-                    os.chdir("/root/Bots/Dupe Protection/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 bot.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 else:
                     embed = disnake.Embed(title=f'**__Restart Error__**', description = f'```{inter.author.name}, {bot} Is Online And Does Not Need To Be Restarted.```', color=color1)
                     embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
@@ -192,16 +192,16 @@ class manager(commands.Cog):
     async def status(self):
         await client.wait_until_ready()
         for guild in client.guilds:
-            if guild.id == 798352530564055050:
+            if guild.id == your_guild_id:
                 #try:
-                channel = client.get_channel(1000426776033497129)
-                bot_message = await channel.fetch_message(1002947109558947840)
-                vps_message = await channel.fetch_message(1002947110322307093)
-                ark_guardian = guild.get_member(977371773425295430)
-                ark_pop = guild.get_member(887837554374758420)
-                guardian = guild.get_member(892487976540590090)
-                tickets = guild.get_member(845389276937191495)
-                dupe = guild.get_member(977358161210130524)
+                channel = client.get_channel(channel_id_of_the_status_channel)
+                bot_message = await channel.fetch_message(message_id_of_bot_status_message)
+                vps_message = await channel.fetch_message(message_id_of_vps_status_message)
+                ark_guardian = guild.get_member(bot_id)
+                ark_pop = guild.get_member(bot_id2)
+                guardian = guild.get_member(bot_id3)
+                tickets = guild.get_member(bot_id4)
+                dupe = guild.get_member(bot_id5)
                 cpu = psutil.Process(os.getpid()).memory_info().rss / 1024 ** 2
                 cpu1 = psutil.cpu_percent()
 
@@ -219,8 +219,8 @@ class manager(commands.Cog):
                 if str(ark_guardian.status) == 'offline':
                     dot1 = ':red_circle:'
                     act1 == 'Bot is offline'
-                    #os.chdir("/root/Bots/Ark Guardian Dev/")
-                    #subprocess.Popen("screen -dm bash -c; python3.10 bot.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 if str(ark_guardian.status) == 'online':
                     dot1 = ':green_circle:'
                     try:
@@ -230,8 +230,8 @@ class manager(commands.Cog):
                 if str(ark_pop.status) == 'offline':
                     dot2 = ':red_circle:'
                     act2 = 'Bot is offline'
-                    os.chdir("/root/Bots/Ark Pop/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 ark.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 if str(ark_pop.status) == 'online':
                     dot2 = ':green_circle:'
                     try:
@@ -241,8 +241,8 @@ class manager(commands.Cog):
                 if str(guardian.status) == 'offline':
                     dot3 = ':red_circle:'
                     act3 == 'Bot is offline'
-                    os.chdir("/root/Bots/Guardian/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 bot.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 if str(guardian.status) == 'online':
                     dot3 = ':green_circle:'
                     try:
@@ -252,8 +252,8 @@ class manager(commands.Cog):
                 if str(tickets.status) == 'offline':
                     dot4 = ':red_circle:'
                     act4 = 'Bot is offline'
-                    os.chdir("/root/Bots/Tickets/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 bot.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 if str(tickets.status) == 'online':
                     dot4 = ':green_circle:'
                     try:
@@ -263,8 +263,8 @@ class manager(commands.Cog):
                 if str(dupe.status) == 'offline':
                     dot5 = ':red_circle:'
                     act5 = 'Bot is offline'
-                    os.chdir("/root/Bots/Dupe Protection/")
-                    subprocess.Popen("screen -dm bash -c; python3.10 bot.py", shell=True)
+                    os.chdir("/path to your bot file")
+                    subprocess.Popen("screen -dm bash -c; python3.10 your_bot.py", shell=True)
                 if str(dupe.status) == 'online':
                     dot5 = ':green_circle:'
                     try:

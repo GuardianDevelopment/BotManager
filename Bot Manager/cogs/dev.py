@@ -11,14 +11,14 @@ class dev(commands.Cog):
     @commands.slash_command(description= 'Restart the bot (Dev use only)')
     async def restart(self, inter):
         await inter.response.defer()
-        if str(inter.author.id) == '839281450671013898':
+        if str(inter.author.id) == 'your_id':
             embed = disnake.Embed(title=f'**__Restarting {client.user.name}__**', description = f'```Please Allow For Up To Five (5) Seconds For Me To Be Back Up And Running.```', color=color)
             embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
             embed.set_thumbnail(url=client.user.display_avatar.url)
             await inter.send(embed=embed)
             call(["python3.10", "startup.py"])
             exit()
-        elif str(inter.author.id) == '600905112038408193':
+        elif str(inter.author.id) == 'your_id':
             embed = disnake.Embed(title=f'**__Restarting {client.user.name}__**', description = f'```Please Allow For Up To Five (5) Seconds For Me To Be Back Up And Running.```', color=color)
             embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
             embed.set_thumbnail(url=client.user.display_avatar.url)
@@ -34,13 +34,13 @@ class dev(commands.Cog):
     @commands.slash_command(description= 'Stop the bot (Dev Use Only)')
     async def stop(self, inter):
         await inter.response.defer()
-        if str(inter.author.id) == '839281450671013898':
+        if str(inter.author.id) == 'your_id':
             embed = disnake.Embed(title=f'**__Stopping {client.user.name}__**', description = f'```Please Allow For Up To Five (5) Seconds For Me To Be Fully Shut Down.```', color=color)
             embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
             embed.set_thumbnail(url=client.user.display_avatar.url)
             await inter.send(embed=embed)
             exit()
-        elif str(inter.author.id) == '600905112038408193':
+        elif str(inter.author.id) == 'your_id':
             embed = disnake.Embed(title=f'**__Stopping {client.user.name}__**', description = f'```Please Allow For Up To Five (5) Seconds For Me To Be Fully Shut Down.```', color=color)
             embed.set_footer(text=f'{client.user.name} v{ver} | Executed by {inter.author.name}', icon_url=client.user.display_avatar.url)
             embed.set_thumbnail(url=client.user.display_avatar.url)
